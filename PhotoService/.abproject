@@ -1,0 +1,45 @@
+{
+  "ProjectName": "PhotoService",
+  "ProjectGuid": "b7e1b6eb-2cb8-4f4e-9061-1ea02d1c8f65",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.PhotoService",
+  "DisplayName": "PhotoService",
+  "Author": "",
+  "Description": "PhotoService",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "4.0.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{09c63594-3d50-4240-a465-39a443dc1cd1}",
+  "WP8ProductID": "{03a40334-3c9b-4603-8ac3-549f6fa3af4c}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.PhotoService",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
