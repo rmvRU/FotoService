@@ -1,0 +1,31 @@
+<script>
+    var settings = {
+        service_url: app.service_url,
+        ok: function () {
+            settings.service_url = document.getElementById("input_service_url").value;
+            if (settings.service_url!=app.service_url){
+				alert("При изменении настроек сервиса нужно перезапустить приложение");
+                app.service_url=settings.service_url;
+                app.quit();
+                return;
+            };
+            app.mobileApp.navigate("#:back");
+        },
+        cancel: function () {
+            app.mobileApp.navigate("#:back");
+        }
+    }
+</script>
+<div data-role="view" data-model="settings" data-title="Настройки">
+    <span data-role="view-title"></span>
+    <span data-bind="text:service_url"></span>
+    <ul data-role="listview" data-style="">
+        <li>
+            <label>URL сервиса
+                    <input id="input_service_url" type="text" data-bind="value:service_url" />
+                </label>
+        </li>
+    </ul>
+    <button data-click="settings.ok" data-role="button" type="button">ОК</button>
+    <button data-click="settings.cancel" data-role="button" type="button">Отмена</button>
+</div>

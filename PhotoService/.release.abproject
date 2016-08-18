@@ -1,5 +1,6 @@
 {
   "CorePlugins": [
+    "com.synconset.imagepicker@2.1.5",
     "cordova-plugin-battery-status",
     "cordova-plugin-camera",
     "cordova-plugin-contacts",

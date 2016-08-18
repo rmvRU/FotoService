@@ -1,0 +1,20 @@
+<div id="list-view" data-role="view" data-show="list.show" data-title="Text" data-layout="main-layout" data-reload="true">
+    <div data-role="header">
+        <div id="navbar" data-role="navbar">
+            <a href="#app-drawer" data-rel="drawer" data-role="button" data-align="left" data-icon="details"></a>
+            <span data-bind="text:caption"></span>
+            <a href="Views/settings.html" data-role="button" data-align="right" data-icon="settings"></a>
+            <a data-align="right" data-role="button" data-click="list.quit">Выход</a>
+        </div>
+        <input id="list-search" placeholder="text" type="search" style="width:80%; height: 30px; margin: 4px 3% 4px 3%; padding-left:6px; padding-right:6px;" autocapitalize="off" autocorrect="off" /></input>
+        <a class="button" data-role="button" data-icon="search" data-click="list.search"></a>
+    </div>
+    <ul id="list-view-data" data-click="list.click" data-role="listview"></ul>
+    <div data-role="footer">
+        <div id="list-tabstrip">
+        </div>
+        <script type="text/x-kendo-template" id="database-template">
+            <a data-icon="favorite">#:name#</a>
+        </script>
+    </div>
+</div>
