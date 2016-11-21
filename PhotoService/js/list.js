@@ -16,8 +16,13 @@
         show: function () {
             var location = window.location.toString();
             var type = location.substring(location.lastIndexOf('?') + 6);
+            //alert(location);
+            if (typeof(app.requested_type)!='undefined'){
+                type=app.requested_type;                
+            }
             var needLoadApplet = typeof (app.applet) == 'undefined';
             if (!needLoadApplet) needLoadApplet = app.applet.type != type;
+            if (!needLoadApplet) return;
             if (needLoadApplet) {
                 app.applet_def = get_image_applet_by_type(type);
                 app.applet = new Image_applet(app.applet_def);
@@ -50,7 +55,8 @@
                     window.list.reload();
                 }
             });
-            app.applet.datasource.transport.options.read.url = app.applet.datasource.transport.options.read.base_url + "&database_id=" + app.database_id
+            app.applet.datasource.transport.options.read.url = app.applet.datasource.transport.options.read.base_url + "&search=" + app.applet.searchString + "&database_id=" + app.database_id
+            //app.applet.datasource.transport.options.read.url = app.applet.datasource.transport.options.read.base_url + "&database_id=" + app.database_id
             $("#list-view-data").kendoMobileListView({
                 dataSource: app.applet.datasource,
                 template: app.applet.template,

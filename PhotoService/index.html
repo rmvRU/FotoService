@@ -27,10 +27,19 @@
                 <span data-role="view-title">Menu</span>
             </div>
         </div>
-        <ul data-role="listview" data-source="image_applets" data-template="menu-template" />
+        <ul data-role="listview" data-source="image_applets" data-template="menu-template" data-click="navigateMenu" />
     </div>
     <script type="text/x-kendo-template" id="menu-template">
         <a href="Views/list.html?type=#:type#"> #:caption# </a>
+    </script>
+    <script>
+        function navigateMenu(e){
+            e.preventDefault();
+            var i=($(e.item).index());
+            var ia=image_applets[i];
+            app.requested_type=ia.type;
+            app.mobileApp.navigate("Views/list.html?type=" + ia.type);
+        }
     </script>
 </body>
 
